@@ -2,14 +2,14 @@ class HeloController < ApplicationController
     
     def index
        if params['msg'] != nil then
-           msg = '辛抱に辛抱を ' + params['msg'] + '!'
+           msg = 'おはようございます。 ' + params['msg'] + '!'
        else
-           msg = '重ねた、今度はこちらからいくぞ！'
+           msg = '素晴らしい天気です'
        end
        html = '
        <html>
        <body>
-          <h1>反撃宣言</h1>
+          <h1>朝のご挨拶</h1>
           <p>' + msg + '</p>
        </body>
        </html>
