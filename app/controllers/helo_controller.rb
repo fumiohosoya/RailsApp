@@ -1,19 +1,15 @@
 class HeloController < ApplicationController
+    protect_from_forgery
     
     def index
-       if params['msg'] != nil then
-           msg = 'おはようございます。 ' + params['msg'] + '!'
-       else
-           msg = '素晴らしい天気です'
-       end
-       html = '
-       <html>
-       <body>
-          <h1>朝のご挨拶</h1>
-          <p>' + msg + '</p>
-       </body>
-       </html>
-       '
-       render html: html.html_safe
+        if request.post? then
+            @title = 'Result'
+            @msg = 'you typed: ' + params['input1'] + '.'
+            @value = ''
+        else
+            @tytle = 'Index'
+            @msg = 'type text'
+            @value = ''
+        end
     end
 end
