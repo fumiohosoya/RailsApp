@@ -1,5 +1,5 @@
 class HeloController < ApplicationController
-    protect_from_forgery
+    
     
     def index
         if request.post? then
@@ -7,8 +7,8 @@ class HeloController < ApplicationController
             @msg = 'you typed: ' + params['input1'] + '.'
             @value = ''
         else
-            @tytle = 'Index'
-            @msg = 'type text'
+            @title = 'Index'
+            @msg = 'Type text...'
             @value = ''
         end
     end
