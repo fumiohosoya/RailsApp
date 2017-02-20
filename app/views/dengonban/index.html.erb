@@ -1,6 +1,6 @@
-<!DOCUTYPE html>
-<html>
-<head> 
+<h1>Dengonban#index</h1>
+<p>Find me in app/views/dengonban/index.html.erb</p>
+
 <table class="form">
  <%= form_tag(controller: "dengonban", action: "index") do %>
  <tr>
@@ -13,7 +13,7 @@
  </tr>
  <tr>
      <td>メッセージ</td>
-     <td><%= text_area_tag("msg", ' ', size: "50x3") %></td>
+     <td><%= text_area_tag("msg", '', size: "50x3") %></td>
  </tr>
  <tr>
      <td></td>
@@ -21,9 +21,7 @@
  </tr>
  <% end %>
 </table>
-</head>
 
-<head>
 <table class="dengon">
  <tr>
      <th style="width:50%">メッセージ</th>
@@ -33,13 +31,12 @@
  </tr>
  <% @dengon_data.each do |key,obj| %>
  <tr>
-     <td class="msg"><%= obj['mag'] %></td>
+     <td class="msg"><%= obj['msg'] %></td>
      <td class="name"><%= obj['name'] %></td>
      <td class="mail"><%= obj['mail'] %></td>
      <td class="time"><%= Time.at(key.to_i) %></td>
  </tr>
  <% end %>
  </table>
- </head>
  
-</html>
+     

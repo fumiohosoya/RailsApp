@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   get 'dengonban/index'
   post 'dengonban/index'
 
-  get 'helo', to: 'helo#index'
-  post 'helo', to: 'helo#index'
-  get 'helo/index'
-  post 'helo/index'
-
-
-
+  # ここにルーティングの情報を追加する
+  #get 'helo/index'
+  #get 'helo', to: 'helo#index'
+  #get 'helo/other'
+  #post 'helo', to: 'helo#index'
+  #post 'helo/index'
+  
 end
