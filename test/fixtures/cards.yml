@@ -2,14 +2,14 @@
 
 one:
   title: MyText
-  auther: MyText
+  author: MyText
   price: 1
   publisher: MyText
   memo: MyText
 
 two:
   title: MyText
-  auther: MyText
+  author: MyText
   price: 1
   publisher: MyText
   memo: MyText
