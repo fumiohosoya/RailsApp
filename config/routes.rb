@@ -24,6 +24,20 @@ Rails.application.routes.draw do
   patch 'people/edit/:id', to: 'people#update'
   get 'people/delete/:id', to: 'people#delete'
   
+  get 'cards/index'
+  get 'cards', to: 'cards#index'
+  
+  get 'cards/add'
+  post 'cards/add'
+  
+  get 'cards/id', to: 'cards#show'
+  
+  get 'cards/edit/:id', to: 'cards#edit'
+  patch 'cards/edit/:id', to: 'cards#edit'
+  
+  get 'cards/delete/:id', to: 'cards#delete'
+  
+  
   # ここにルーティングの情報を追加する
   #get 'helo/index'
   #get 'helo', to: 'helo#index'
