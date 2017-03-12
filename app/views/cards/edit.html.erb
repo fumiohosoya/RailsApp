@@ -1,5 +1,5 @@
 <h1>Cards#edit</h1>
-<p>※「<%= @card.title %>」の内容を変更します。</p>
+<p>※「<%= @card.title %>」の内容を編集します。</p>
 <table>
     <%= form_for(@card, url:{controller:'cards', action:'edit',id:@card.id}) do |form| %>
     <tr><th>タイトル</th>
