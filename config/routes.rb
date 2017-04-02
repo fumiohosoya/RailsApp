@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'people', to: 'people#index'
   get 'people/add'
   post 'people/add', to: 'people#create'
+  get 'people/find'
+  post 'people/find'
   get 'people/:id', to: 'people#show' 
 
   get 'dengonban', to: 'dengonban#index'
@@ -36,7 +38,6 @@ Rails.application.routes.draw do
   patch 'cards/edit/:id', to: 'cards#edit'
   
   get 'cards/delete/:id', to: 'cards#delete'
-  
   
   # ここにルーティングの情報を追加する
   #get 'helo/index'
