@@ -16,10 +16,12 @@ class PeopleController < ApplicationController
   end  
     
   def create
-    if request.post? then
-        Person.create(person_params)
-    end  
-    redirect_to '/people'
+    @person = Person.new person_params
+    if @person.save then
+       redirect_to '/people'
+    else
+        render 'add'
+    end
   end
   
   def edit
