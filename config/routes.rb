@@ -1,5 +1,24 @@
 Rails.application.routes.draw do
+ 
+  get 'messages/index'
+  get 'messages', to: 'messages#index'
   
+  get 'messages/add'
+  post 'messages/add', to: 'messages#create'
+  
+  get 'messages/edit/:id', to: 'messages#edit'
+  patch 'messages/edit/:id', to: 'messages#update'
+  
+  get 'messages/delete/:id', to: 'messages#delete'
+  get 'messages/:id', to: 'messages#show'
+  get 'messages/index'
+
+  get 'messages/show'
+
+  get 'messages/add'
+
+  get 'messages/edit'
+
   get 'cards/index'
 
   get 'cards/show'
