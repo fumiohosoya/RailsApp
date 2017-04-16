@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415101039) do
+ActiveRecord::Schema.define(version: 20170416092612) do
+
+  create_table "blogconfigs", force: :cascade do |t|
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "stylename"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bloggenres", force: :cascade do |t|
+    t.text     "name"
+    t.string   "memo"
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "blogposts", force: :cascade do |t|
+    t.text     "title"
+    t.text     "read"
+    t.text     "content"
+    t.integer  "bloggenre_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "cards", force: :cascade do |t|
     t.text     "title"
