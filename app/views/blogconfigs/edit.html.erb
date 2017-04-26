@@ -9,7 +9,7 @@
 <% end %>
 <table>
     <%= form_for(@blogconfig, url:{controller:'blogconfigs',
-     action:'edit'} do |form| %>
+     action:'edit'}) do |form| %>
     <tr><th>Title</th>
         <td><%= form.text_field :title %></td></tr>
     <tr><th>Subtitle</th>

@@ -24,7 +24,7 @@ class BlogpostsController < ApplicationController
   end
 
   def delete
-      @blogpost = Blogpost.find params[:id]
+      @blogpost = Blogpost.find(params[:id])
       if request.post? then
          @blogpost.destroy
          redirect_to '/blogposts'
